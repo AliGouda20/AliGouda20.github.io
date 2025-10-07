@@ -52,7 +52,7 @@ jobs:
   # SCA - OWASP Dependency-Check CLI
   # ----------------------------
   sca:
-    name: SCA - Dependency-Check
+    name: SCA - OWASP Dependency-Check
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -69,7 +69,7 @@ jobs:
           node-version: ${{ env.NODE_VERSION }}
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       - name: Download OWASP Dependency-Check CLI
         run: |
@@ -109,7 +109,7 @@ jobs:
           node-version: ${{ env.NODE_VERSION }}
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       - name: Start App in Background
         run: |
